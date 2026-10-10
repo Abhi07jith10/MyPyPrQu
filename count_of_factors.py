@@ -1,14 +1,12 @@
-#Count the Factors
-#Write a Python program using a while loop to count how many factors a given number has.
+#wap to get the count of factors of a number given
 
-num=int(input("enter the number : "))
-
+number=int(input("enter the number : "))
 i=1
 count=0
-while i<=num:
-    if num%i==0:
-        count+=1 
-        
+
+while (i<=number):
+    if number%i==0:
+        count+=1
     i+=1
 
-print(f"The total count of factors of a given number is {count} ")
+print(f"The total number of factors are {count}")
