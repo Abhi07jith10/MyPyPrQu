@@ -1,9 +1,9 @@
-#get the factors of the number given
-#8:1,2,4,8
-#6:1,2,3,6
+#wap to get the factors of a number enter by user
 
-n=int(input("enter the number"))
+num=int(input("enter the number : "))
 
-for i in range(1,n+1):
-    if n%i==0:
-        print(i)
+i=1
+while i<=num: 
+ if num%i==0:
+    print(i)
+ i+=1
