@@ -1,12 +1,13 @@
-num=int(input("enter the number :"))
-temp=num
+#wap to count the digits of a number
 
+number=int(input("enter the number: "))
+print(number)
 count=0
+while number>0:
+    number%10
+    count+=1
 
-while num>0:
+    number//=10  #we need to decrement the numbers, for ex5678, 567, 56, 5
 
-    lastdigit=num%10
-    if lastdigit>=0:
-        count+=1
-    num//=10
-print(f"the count of the number {temp} is {count}")
+print(f"The total count is {count}")
+
