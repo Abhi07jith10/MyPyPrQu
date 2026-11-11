@@ -1,6 +1,3 @@
-#using a lambda
-#input>> "python is a programming language"
-#op >> {"python":6,"is":2,"a";2,"programming":11,"language":9}
+nums=[1,2,3,4,5,6,7,8]
 
-result=lambda text:{i:len(i) for i in text.split()}
-print(result(text="python is a programming language"))
+print(list(filter(lambda a: a%2==0,nums)))
