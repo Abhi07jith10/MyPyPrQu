@@ -1,14 +1,38 @@
-class Student:
-    def __init__(self, name, branch):
-        self.name = name          # attributes (data)
-        self.branch = branch
+students = [
+    ["Abhi", 85, 90, 78],
+    ["Arun", 70, 65, 80],
+    ["Meera", 92, 88, 95],
+    ["Anu", 60, 75, 68]
+]
 
-    def introduce(self):          # method (behavior)
-        print(f"Hi, I'm {self.name} from {self.branch}")
+dictionary_students={}
+for i in students:
+    dictionary_students[i[0]]=i[1:]
 
-# Creating objects from the class
-s1 = Student("Abhi", "ECE")
-s2 = Student("Arun", "CSE")
+highest=0
+for j in dictionary_students:
+    if sum(dictionary_students[j])>highest:
+        highest=sum(dictionary_students[j])
+        char=j
+print(char,highest)
 
-s1.introduce()   # Hi, I'm Abhi from ECE
-s2.introduce()   # Hi, I'm Arun from CSE
+for k in dictionary_students:
+    average=sum(dictionary_students[k])//len(dictionary_students[k])
+    print(k,average)
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+    
+    
+    
+
