@@ -1,54 +1,39 @@
-#Write a Python program to create a simple ATM system.
-#The user starts with an initial balance of ₹10,000.
-#Display the following menu:
-#===== ATM MENU =====
-#1. Check Balance
-#2. Deposit
-#3. Withdraw
-#4. Exit
-#Ask the user to enter their choice.
-#Use if-elif-else to perform the following operations:
-#Check Balance
-#Display the current account balance.
-#Deposit
-#Ask the user to enter the deposit amount.
-#Add the amount to the balance.
-#Display the updated balance.
-#Withdraw
-#Ask the user to enter the withdrawal amount.
-#Check whether the withdrawal amount is less than or equal to the available balance.
-#If sufficient balance is available, deduct the amount and display the remaining balance.
-#Otherwise, display "Insufficient Balance".
-#Exit
-#Display "Thank you for using the ATM".
-#If the user enters any other choice:
-#Display "Invalid Choice".
+#create a class ATM
+#method 1 (details, balance=10000, name)
+#method2 = deposit()
+#method3 = withdrawl()
+#method4 = check balance
 
-balance=10000
 
-print("======================ATM MENU===================")
-print(f"1.Check Balance \n2.Deposit \n3.Withdraw \n4.Exit")
+# Hy Abhi welcome to SBI BANK
+# Hy your deposit is succesfull
+# Your account balance after deposit is 12000
+# withdrawl succesfull
+# Your account balance after withdrawl is 7000
+# Your balance amount is 7000
 
-choice=input("Enter your choice: ")
+class Atm():
+    def details(self,name,balance):
+        self.name=name
+        self.balance=balance
+        print(f"Hy {name} welcome to SBI bank. ")
+        print(F"your current balance is {balance}")
 
-if choice=="1":
-    print(f"Your current account balance is {balance}")
-
-elif choice=="2":
-    deposit_amount=int(input("enter the deposit amount: "))
-    balance=deposit_amount+balance
-    print(f"Your updated balance is {balance}")
-
-elif choice=="3":
-    withdrawl_amount=int(input("Enter your withdrawl amount: "))
-    if withdrawl_amount<=balance:
-        balance=balance-withdrawl_amount
-        print(f"Your updated balance is {balance}")
-    else:
-        print("Sorry, you have insufficient balance")
+    def deposit(self,deposit_amount):
         
-elif choice=="4":
-    print("Thank you for using the ATM")
-else:
-    print("Invalid choice")
+        self.balance+=deposit_amount
+        print("Deposit sucessfull")
+        
 
+    def withdrawl(self,withdrawl_amount):
+        self.balance-=withdrawl_amount
+        print("Withdrawl sucessfull")
+    def check_balance(self):
+        
+        print(f"Your balance is {self.balance}")
+
+obj1=Atm()
+obj1.details("Abhi",10000)
+obj1.deposit(2000)
+obj1.withdrawl(5000)
+obj1.check_balance()

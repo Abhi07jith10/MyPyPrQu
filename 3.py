@@ -1,23 +1,26 @@
-#wap to return the even numbers from numbers 1 to 20 in a list
-#return the list of square of numbers from even list above.
-#from the final squared lsit return the sum
+# Transpose a Matrix
+# Convert the given nested list into its transpose.
+# numbers = [
+#  [10, 20, 30],
+#  [40, 50, 60],
+#  [70, 80, 90]
+# ]
+# Expected output:
+# 10 40 70
+# 20 50 80
+# 30 60 90
 
-# nums=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-# even_nums=[]
-# for i in nums:
-#     if i%2==0:
-#         even_nums.append(i)
+numbers = [
+  [10, 20, 30],
+  [40, 50, 60],
+  [70, 80, 90]
+ ]
 
-# squared_list=[]
-# for i in even_nums:
-#     squared_list.append(i**2)
+new=[]
+for i in numbers:
+    for j in i:
+        new.append(j)
 
-
-# print(sum(squared_list))
-
-nums=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-
-from functools import reduce
-even=(list(filter(lambda a:a%2==0,nums)))
-square=(list(map(lambda a:a**2,even)))
-print((reduce(lambda a,b:a+b,square)))
+print(new[0],new[3],new[6])
+print(new[1],new[4],new[7])
+print(new[2],new[5],new[8])
